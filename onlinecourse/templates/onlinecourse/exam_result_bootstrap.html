@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+ <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'onlinecourse:index' %}">Home</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+            <li>
+                <a class="btn btn-link" href="#">{{ user.first_name }}({{ user.username }})</a>
+                <a class="btn btn-link" href="{% url 'onlinecourse:logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <form class="form-inline" action="{% url 'onlinecourse:login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Username" name="username" >
+                        <input type="password" class="form-control" placeholder="Username" name="psw" >
+                        <button class="btn btn-primary" type="submit">Login</button>
+                        <a class="btn btn-link" href="{% url 'onlinecourse:registration' %}">Sign Up</a>
+                    </div>
+                </form>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <h2 class="mt-3">{{ course.name }} - Exam Result</h2>
+
+    {% if is_passed or grade >= 80 %}
+    <div class="alert alert-success mt-3" role="alert">
+       <h4 class="alert-heading">Congratulations, {{ user.first_name|default:user.username }}!</h4>
+       <p class="mb-0">You have successfully passed the exam.</p>
+       <hr>
+       <p class="mb-0"><strong>Score:</strong> {{ grade }}/{{ max_score }} ({{ score_percent }}%)</p>
+    </div>
+    {% else %}
+    <div class="alert alert-danger mt-3" role="alert">
+        <h4 class="alert-heading">Failed</h4>
+        <p class="mb-0">You did not pass this attempt. Review the results below and retake the exam.</p>
+        <hr>
+        <p class="mb-0"><strong>Score:</strong> {{ grade }}/{{ max_score }} ({{ score_percent }}%)</p>
+    </div>
+    <a class="btn btn-outline-danger mb-3" href="{% url 'onlinecourse:course_details' course.id %}">Re-test</a>
+    {% endif %}
+
+    <div class="card-columns-vertical mt-1 mb-4">
+        <h5>Exam results</h5>
+        {% for question in questions %}
+        <div class="card mt-2">
+            <div class="card-header">
+                <strong>Question {{ forloop.counter }}:</strong> {{ question.content }}
+            </div>
+            <div class="card-body">
+                {% for choice in question.choice_set.all %}
+                    {% if choice in choices and choice.is_correct %}
+                    <div class="alert alert-success py-2 mb-2">
+                        {{ choice.content }}
+                        <span class="badge badge-success ml-2">Correctly selected</span>
+                    </div>
+                    {% elif choice in choices and not choice.is_correct %}
+                    <div class="alert alert-danger py-2 mb-2">
+                        {{ choice.content }}
+                        <span class="badge badge-danger ml-2">Incorrectly selected</span>
+                    </div>
+                    {% elif choice not in choices and choice.is_correct %}
+                    <div class="alert alert-warning py-2 mb-2">
+                        {{ choice.content }}
+                        <span class="badge badge-warning ml-2">Correct answer</span>
+                    </div>
+                    {% else %}
+                    <div class="border rounded p-2 mb-2 bg-light">
+                        {{ choice.content }}
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% empty %}
+        <div class="alert alert-info mt-2">No exam questions were found for this course.</div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
