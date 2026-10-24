@@ -1,0 +1,28 @@
+curl -X GET http://localhost:3030/fetchDealers/Kansas
+
+[
+  {
+    "id": 3,
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "72645 Michigan Avenue",
+    "zip": "66601",
+    "lat": 39.0558,
+    "long": -95.689,
+    "short_name": "Sub-Ex",
+    "full_name": "Sub-Ex Kansas Dealership"
+  },
+  {
+    "id": 4,
+    "city": "Wichita",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "1840 West Street",
+    "zip": "67201",
+    "lat": 37.6872,
+    "long": -97.3301,
+    "short_name": "Sunflower Auto",
+    "full_name": "Sunflower Auto Wichita"
+  }
+]

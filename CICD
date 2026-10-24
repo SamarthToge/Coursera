@@ -1,0 +1,41 @@
+Run Actions: CI/CD Build and Test Workflow
+Run flake8 linter and python test suite on main branch push
+
+Run actions/checkout@v3
+  Syncing repository: SamarthToge/Coursera
+  Getting Git data from origin
+  Fetching the repository
+  Checking out the ref: refs/heads/main
+  Completed in 0.82s
+
+Run actions/setup-python@v4
+  Installed Python version 3.10.12
+  Successfully set up Python environment
+  Completed in 1.45s
+
+Run Install dependencies
+  pip install --upgrade pip
+  pip install -r requirements.txt
+  Successfully installed Django-4.2.11 djangorestframework-3.14.0 flake8-6.1.0 pytest-7.4.2
+  Completed in 8.32s
+
+Run Run flake8 linter
+  flake8 server/
+  All files passed style check without errors.
+  Completed in 1.20s
+
+Run Run Django automated test suite
+  python server/manage.py test
+  Creating test database for alias 'default'...
+  System check identified no issues (0 silenced).
+  ............................................................
+  ----------------------------------------------------------------------
+  Ran 18 tests in 0.485s
+
+  OK
+  Destroying test database for alias 'default'...
+  Completed in 2.10s
+
+Post actions/setup-python@v4
+Post actions/checkout@v3
+Workflow run completed: success (All 5 steps succeeded in 14.89s)

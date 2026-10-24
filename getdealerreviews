@@ -1,0 +1,40 @@
+curl -X GET http://localhost:3030/fetchReviews/dealer/1
+
+[
+  {
+    "id": 1,
+    "name": "Berkly Welds",
+    "dealership": 1,
+    "review": "Total experience was pleasant. Great staff and easy negotiation on financing.",
+    "purchase": true,
+    "purchase_date": "02/16/2023",
+    "car_make": "Audi",
+    "car_model": "A6",
+    "car_year": 2020,
+    "sentiment": "positive"
+  },
+  {
+    "id": 2,
+    "name": "Gweneth Rains",
+    "dealership": 1,
+    "review": "Friendly sales associates and smooth handover of the car. Highly recommended dealership!",
+    "purchase": true,
+    "purchase_date": "06/11/2023",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2021,
+    "sentiment": "positive"
+  },
+  {
+    "id": 3,
+    "name": "Roger Sterling",
+    "dealership": 1,
+    "review": "Average service experience. The paperwork took longer than promised.",
+    "purchase": false,
+    "purchase_date": "11/04/2023",
+    "car_make": "Honda",
+    "car_model": "Accord",
+    "car_year": 2019,
+    "sentiment": "neutral"
+  }
+]

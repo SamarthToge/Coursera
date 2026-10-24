@@ -1,0 +1,14 @@
+curl -X GET http://localhost:3030/fetchDealer/1
+
+{
+  "id": 1,
+  "city": "El Paso",
+  "state": "Texas",
+  "st": "TX",
+  "address": "3 Nova Court",
+  "zip": "79915",
+  "lat": 31.6948,
+  "long": -106.3,
+  "short_name": "Holdlamis",
+  "full_name": "Holdlamis Car Dealership"
+}

@@ -1,0 +1,13 @@
+$ python3 manage.py runserver 8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 24, 2026 - 10:30:12
+Django version 4.2.11, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[24/Oct/2026 10:30:25] "GET / HTTP/1.1" 200 1482
+[24/Oct/2026 10:30:26] "GET /static/frontend/main.bundle.js HTTP/1.1" 200 482012
+[24/Oct/2026 10:30:28] "GET /djangoapp/get_dealers HTTP/1.1" 200 9850
+[24/Oct/2026 10:30:45] "POST /djangoapp/login HTTP/1.1" 200 52

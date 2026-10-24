@@ -1,0 +1,64 @@
+curl -X GET http://localhost:3030/fetchDealers
+
+[
+  {
+    "id": 1,
+    "city": "El Paso",
+    "state": "Texas",
+    "st": "TX",
+    "address": "3 Nova Court",
+    "zip": "79915",
+    "lat": 31.6948,
+    "long": -106.3,
+    "short_name": "Holdlamis",
+    "full_name": "Holdlamis Car Dealership"
+  },
+  {
+    "id": 2,
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "st": "MN",
+    "address": "63373 Tennessee Drive",
+    "zip": "55483",
+    "lat": 44.9778,
+    "long": -93.265,
+    "short_name": "Temp",
+    "full_name": "Temp Auto Hub"
+  },
+  {
+    "id": 3,
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "72645 Michigan Avenue",
+    "zip": "66601",
+    "lat": 39.0558,
+    "long": -95.689,
+    "short_name": "Sub-Ex",
+    "full_name": "Sub-Ex Kansas Dealership"
+  },
+  {
+    "id": 4,
+    "city": "Wichita",
+    "state": "Kansas",
+    "st": "KS",
+    "address": "1840 West Street",
+    "zip": "67201",
+    "lat": 37.6872,
+    "long": -97.3301,
+    "short_name": "Sunflower Auto",
+    "full_name": "Sunflower Auto Wichita"
+  },
+  {
+    "id": 5,
+    "city": "Dallas",
+    "state": "Texas",
+    "st": "TX",
+    "address": "908 Main Street",
+    "zip": "75201",
+    "lat": 32.7767,
+    "long": -96.797,
+    "short_name": "LoneStar",
+    "full_name": "LoneStar Motors"
+  }
+]

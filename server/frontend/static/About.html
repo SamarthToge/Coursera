@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Best Dealerships</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            padding: 70px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .team-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .team-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .role-badge {
+            background-color: #e8f0fe;
+            color: #1a73e8;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+        .email-link {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fa-solid fa-car-side text-primary me-2"></i>Best Dealerships
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">About Best Dealerships</h1>
+            <p class="lead mt-3 mx-auto" style="max-width: 700px;">
+                Welcome to Best Dealerships, your nationwide destination for certified, reliable, and premium vehicles. We connect car buyers with verified customer reviews and transparent dealership information across all 50 states.
+            </p>
+        </div>
+    </section>
+
+    <!-- Content / Team Section -->
+    <div class="container my-5">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="fw-bold text-dark">Meet Our Leadership Team</h2>
+                <p class="text-muted">Dedicated professionals driving excellence in automotive retail and customer experience.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Member 1 -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" class="team-img">
+                    <div class="card-body text-center">
+                        <span class="role-badge">Founder & CEO</span>
+                        <h4 class="card-title fw-bold">Marcus Vance</h4>
+                        <p class="card-text text-muted">
+                            Over 18 years of automotive industry leadership. Marcus founded Best Dealerships with a mission to bring full transparency and trusted reviews to car buying.
+                        </p>
+                        <p class="mt-3 mb-0">
+                            <i class="fa-solid fa-envelope me-2 text-muted"></i>
+                            <a href="mailto:marcus.vance@bestdealerships.com" class="email-link">marcus.vance@bestdealerships.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Rodriguez" class="team-img">
+                    <div class="card-body text-center">
+                        <span class="role-badge">VP of Customer Relations</span>
+                        <h4 class="card-title fw-bold">Elena Rodriguez</h4>
+                        <p class="card-text text-muted">
+                            Elena oversees customer satisfaction metrics, verified dealership ratings, and ensures consumer sentiment feedback is resolved with the highest standards.
+                        </p>
+                        <p class="mt-3 mb-0">
+                            <i class="fa-solid fa-envelope me-2 text-muted"></i>
+                            <a href="mailto:elena.rodriguez@bestdealerships.com" class="email-link">elena.rodriguez@bestdealerships.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="col-md-4">
+                <div class="card team-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="David Chen" class="team-img">
+                    <div class="card-body text-center">
+                        <span class="role-badge">Chief Technology Officer</span>
+                        <h4 class="card-title fw-bold">David Chen</h4>
+                        <p class="card-text text-muted">
+                            Architect of our cloud microservices platform, David integrates IBM Watson natural language AI to analyze dealer reviews and optimize platform performance.
+                        </p>
+                        <p class="mt-3 mb-0">
+                            <i class="fa-solid fa-envelope me-2 text-muted"></i>
+                            <a href="mailto:david.chen@bestdealerships.com" class="email-link">david.chen@bestdealerships.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Best Dealerships Inc. All rights reserved.</p>
+            <small class="text-secondary">IBM Full Stack Software Developer Capstone Project</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

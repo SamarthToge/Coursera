@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Dealerships</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            background-color: #fff;
+            padding: 30px;
+            height: 100%;
+        }
+        .icon-circle {
+            width: 55px;
+            height: 55px;
+            background-color: #e8f0fe;
+            color: #1a73e8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        .contact-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+            height: 350px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navigation Bar (active on Contact Us) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fa-solid fa-car-side text-primary me-2"></i>Best Dealerships
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contact Our Dealership Team</h1>
+            <p class="lead mt-3 mx-auto" style="max-width: 650px;">
+                Have questions about a dealership, vehicle inventory, or want to report an issue with customer reviews? Our support team is here to help 24/7.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Details & Form Section -->
+    <div class="container my-5">
+        <div class="row g-4 mb-5">
+            <!-- Contact Box 1: Support Phone -->
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <div class="icon-circle mx-auto">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h5 class="fw-bold">Toll-Free Phone</h5>
+                    <p class="text-muted">Mon - Sat: 8:00 AM - 8:00 PM EST</p>
+                    <a href="tel:18005550199" class="fw-bold text-decoration-none text-primary">+1 (800) 555-0199</a>
+                </div>
+            </div>
+
+            <!-- Contact Box 2: Email -->
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <div class="icon-circle mx-auto">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <h5 class="fw-bold">Email Support</h5>
+                    <p class="text-muted">We reply within 24 hours</p>
+                    <a href="mailto:support@bestdealerships.com" class="fw-bold text-decoration-none text-primary">support@bestdealerships.com</a>
+                </div>
+            </div>
+
+            <!-- Contact Box 3: Corporate HQ -->
+            <div class="col-md-4">
+                <div class="contact-card text-center">
+                    <div class="icon-circle mx-auto">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h5 class="fw-bold">Headquarters</h5>
+                    <p class="text-muted">500 Technology Square, Suite 400</p>
+                    <span class="fw-bold text-dark">Cambridge, MA 02139, USA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center g-5">
+            <!-- Dealership Image -->
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80" alt="Dealership Showroom" class="contact-img">
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6">
+                <div class="contact-card">
+                    <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for contacting Best Dealerships. We will get back to you shortly.');">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Your Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Dealership Inquiry / Topic</label>
+                            <select class="form-select">
+                                <option>General Inquiry</option>
+                                <option>Dealership Review Feedback</option>
+                                <option>Car Inventory Inquiry</option>
+                                <option>Technical Support</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Message</label>
+                            <textarea class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Best Dealerships Inc. All rights reserved.</p>
+            <small class="text-secondary">IBM Full Stack Software Developer Capstone Project</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
